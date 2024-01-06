@@ -1,0 +1,97 @@
+body
+    font-family: 'Lato', sans-serif
+    font-weight: 400
+    font-size: 1.6rem
+    letter-spacing: .2rem
+    color: $color-grey
+    padding: 5rem
+    
+    
+    
+.title-first
+    color: $color-white
+    
+    &__main    
+        text-transform: uppercase 
+        display: block  
+        font-size: 5rem
+        font-weight: 800
+        line-height: normal
+        letter-spacing: 1rem   
+        margin-bottom: 1rem
+        animation-name: leftToRight
+        animation-duration: 1.5s
+        animation-timing-function: ease-out
+        animation-delay: 1s
+        backface-visibility: hidden
+        @include respond(tab-land)
+            font-size: 4rem
+        @include respond(tab-port)
+            font-size: 3.5rem
+            letter-spacing: .5rem
+            margin-bottom:0
+    &__second 
+        display: block 
+        line-height: normal     
+        font-size: 4rem
+        font-weight: 100     
+        letter-spacing: .5rem
+        animation: rightToLeft 
+        animation-duration: 1.5s
+        animation-timing-function: ease-out
+        animation-delay: 1s
+        backface-visibility: hidden
+        margin-bottom: 5rem
+        @include respond(tab-land)
+            font-size: 3.5rem
+            margin-bottom: 3.5rem
+        @include respond(tab-port)
+            font-size: 3.2rem
+            letter-spacing: .2rem
+.title-secondary
+    display: inline-block
+    font-size: 3.6rem
+    font-weight: 800
+    letter-spacing: 1rem
+    text-transform: uppercase
+    background: linear-gradient(to right, $color-braun-light, $color-braun-dark)
+    color: transparent
+    -webkit-background-clip: text
+    background-clip: text
+    transition: all .4s
+    backface-visibility: hidden
+    @include respond(tab-land)
+        font-size: 3rem
+    @include respond(tab-port)
+        font-size: 2.5rem
+    &:hover
+        transform: skewY(2deg) skewX(15deg) scale(1.1)
+        text-shadow: $text-shadow
+    &_white
+        color: $color-white
+.title-third
+    font-size: 2rem
+    font-style: normal
+    font-weight: 700
+    line-height: normal
+    letter-spacing: .2rem
+    text-transform: uppercase
+    @include respond(tab-land)
+        font-size: 1.8rem
+    @include respond(tab-port)
+        font-size: 1.6rem
+    
+
+.paragraph
+    font-size: 1.6rem
+    font-style: normal
+    font-weight: 400
+    line-height:  140%
+    letter-spacing: .2rem
+    @include respond(tab-land)
+        font-size: 1.4rem
+    @include respond(tab-port)
+        font-size: 1.2rem
+    
+
+        

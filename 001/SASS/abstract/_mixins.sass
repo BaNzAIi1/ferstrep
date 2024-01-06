@@ -1,0 +1,40 @@
+@mixin style-link($color)
+    display: inline-block
+    color: $color
+    text-decoration: none
+    text-transform: uppercase
+
+@mixin clearfix
+    &::after
+        content: ""
+        display: table
+        clear: both
+
+// @mixin phone
+//     @media (max-width: 600px)
+//         @content
+
+// @mixin tab-port
+//     @media (max-width: 900px)
+//         @content
+
+// @mixin tab-land
+//     @media (max-width: 1200px)
+//         @content
+
+// @mixin big-desktop
+//     @media (min-width: 1800px)
+//         @content
+@mixin respond($breakpoint)
+    @if $breakpoint == phone
+        @media only screen and (max-width: 600px) 
+            @content
+    @if $breakpoint == tab-port
+        @media only screen and (max-width: 900px)
+            @content 
+    @if $breakpoint == tab-land
+        @media only screen and (max-width: 1240px) 
+            @content 
+    @if $breakpoint == big-desktop
+        @media only screen and (min-width: 1800px) 
+            @content

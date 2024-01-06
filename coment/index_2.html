@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style_2.css">
+    <title>Мнение</title>
+</head>
+<body>
+   <div id="container"> <h1 id="title">Мы ценим ваше мнение!</h1>
+    <p id="description">Прошу заполните поля и оставьте отзыв</p></div>
+    <form action="#" method="post" id="survey-form">
+        <label for="name" id="name-label">Имя</label>
+        <input type="text" id="name" name="name" placeholder="Введите Имя" required>
+
+        <label for="email" id="email-label">Почта</label>
+        <input type="email" id="email" name="email" placeholder="Введите майл" required>
+
+        <label for="number" id="number-label">Возраст</label>
+        <input type="number" id="number" name="age" min="1" max="10" placeholder="Введите номер" required>
+
+        <label for="dropdown">Вам понравилось?</label>
+        <select id="dropdown" name="feedback">
+            <option value="like">Да</option>
+            <option value="dislike">Нет</option>
+            <option value="neutral">Не очень</option>
+            <option value="definitely-like">Однозначно да</option>
+            <option value="" selected disabled>-------</option>
+        </select>
+        <label>Выберитье один из варянтов</label>
+        <input type="radio" name="variant1" value="option1"> Вариант 1
+        <input type="radio" name="variant1" value="option2"> Вариант 2
+        <label>Напешитье комент</label>
+        <textarea name="comments" placeholder="Введите что-то" maxlength="500"></textarea>
+
+        <input type="checkbox" name="skills" value="Улучшил свои навыки">
+        <input type="checkbox" name="new-knowledge" value="Узнал что-то новое">
+        <input type="checkbox" name="good-practice" value="Хорошая практика">
+        <input type="checkbox" name="interesting" value="Очень интересно">
+
+        <button type="submit" id="submit">Отправить</button>
+    </form>
+</body>
+</html>

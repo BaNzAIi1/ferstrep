@@ -1,0 +1,169 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #4c9aad;
+    transition: 0.5s ease-in-out;
+}
+
+body.active{
+    background-color: #c71313;
+}
+
+.container{
+    height: 500px;
+    width: 800px;
+    padding: 40px 0;
+    position: relative;
+}
+
+.block{
+    display: flex;
+    justify-content: space-between; /* изменено */
+    align-items: center;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.2); /* изменено */
+    box-shadow: 0 5px 43px rgba(0, 0, 0, 0.2);
+}
+
+.block__item{
+    width: 45%; /* изменено */
+}
+
+.block-item{
+    text-align: center;
+}
+
+.block-item__title{
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+.block-item__btn{
+    border: none;
+    cursor: pointer;
+    background-color: #fff;
+    color: #333;
+    font-size: 16px;
+    font-weight: 500;
+    padding: 10px 20px;
+}
+
+.form-box{
+    background-color: #fff;
+    height: 100%;
+    width: 50%;
+    box-shadow: 0 5px 43px rgba(0, 0, 0, 0.25);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    transition: 0.5s ease-in-out;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+
+.form-box.active{
+    left: 50%;
+}
+
+
+.form{
+    width: 100%;
+    padding: 50px;
+    font-size: 16px;
+
+    position: absolute;
+    transition: 0.5s;
+}
+
+.form_signin{
+    left: 0;
+    transition-delay: 0.25s;
+}
+
+.form_signup{
+    left: 100%;
+    transition-delay: 0s;
+}
+
+.form-box.active .form_signin{
+    left: -100%;
+    transition-delay: 0s;
+}
+
+.form-box.active .form_signup{
+    left: 0;
+    transition-delay: 0.25s;
+}
+
+.form__title{
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: #000;
+}
+
+.form__input{
+    width: 100%;
+    padding: 10px ;
+    border: solid 1px #333;
+    font-size: inherit;
+}
+
+.form__btn{
+    font-size: inherit;
+    border: none;
+    cursor: pointer;
+    background-color: #1390c5;
+    color: #fff;
+    padding: 10px 50px;
+    
+}
+
+.form__forgot{
+    color: #000;
+}
+
+.form__btn__signup{
+    background-color: #c71313;
+    
+}
+ 
+@media  (max-width:992px){
+   .container{
+       max-width: 400px;
+       max-height: 650px;
+       padding: 0;
+       margin: 0 20px;
+    } 
+   .block{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+   }
+   .block-item{
+    width: 100%;
+    padding: 30px 0;
+   }
+   .form-box{
+    width: 100%;
+    height: 500px;
+    box-shadow: none;
+    top:0;
+   }
+   .form-box.active{
+    left: 0;
+    top: 150px;
+   }
+} 
+

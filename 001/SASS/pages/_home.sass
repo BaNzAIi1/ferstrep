@@ -1,0 +1,34 @@
+.section-about
+    padding-top: 8rem
+    @include respond(tab-lend)
+        margin-bottom: 13rem
+    @include respond(tab-port)
+        margin-bottom: 40rem
+.tasck-section
+    background: linear-gradient(90deg, rgba($color-braun-light, 0.70) 0.03%, rgba($color-black, 0.70) 99.94%), url("/img/header-background.jpg") center / cover no-repeat
+    // clip-path: polygon(100% 20%, 100% 100%, 0 80%, 0 0)
+    height: 73.1rem
+    padding: 21rem 0
+    width: 100%
+    text-align: center
+    transform: skewY(7deg)
+    &>*
+        transform: skewY(-7deg)
+
+    @include respond(tab-port)
+        height: 150rem
+
+.section-tour
+    padding-top: 21rem
+    @include respond(tab-port)
+        padding: 10rem 5rem
+
+.section-feedBack
+    padding-top: 8rem 0
+    position: relative
+
+.section-book
+    padding: 10rem
+    background: linear-gradient(90deg,$color-braun-light,$color-braun-dark), 
+    @include respond(tab-port)
+        padding: 5rem

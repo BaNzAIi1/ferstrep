@@ -1,0 +1,20 @@
+.header
+    position: relative
+    height: 100vh
+    background: linear-gradient(90deg, rgba($color-braun-light, 0.70) 0.03%, rgba($color-black, 0.70) 99.94%), url("/img/header-background.jpg") center / cover no-repeat
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 90%)
+    &__box
+        position: absolute
+        top: 40%
+        left: 50%
+        transform: translate(-50%, -50%)
+        width: 100%
+        text-align: center
+        @include respond(tab-land)
+            top: 50%
+    &__logo
+        position: absolute
+        left: 5rem
+        top: 5rem
+        width: 5.6rem
+        height: 7rem
